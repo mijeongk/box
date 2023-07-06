@@ -1,0 +1,79 @@
+<!--파일명 : html_table.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <!-- table만 있으면 기본적으로 테두리 선 없으니 border숫자로 테두리 굵기 정해주고(높을수록 굴어짐),
+     너비는 td에다가 띄어쓰고 width. 너비는 1번만 높이는 각줄마다 넣기
+     tr에 높이는 줄 수 있음. 대신 너비는 줄 수 없음.
+     나중에 css로 할거임
+     색상:
+     단어 기입가능
+     네이버에 rgb 색상표 검색해서 붙여넣기(색상코드) 해도 된다.
+     rgb값으로도 가능함
+     태그에 색 입히는거면 body 전체, 등에도 입히는 것 가능. 그런데 보통은 css으로 함
+    -->
+    <!-- 
+        table 태그
+        표 만들기
+        tr: 줄
+        td: 칸
+        테이블에 테두리선을 나타내려면 table 태그에 border 값주기(숫자 최솟값1~최대?)
+        테이블의 각 칸의 너비와 높이는 td 태그에 width(너비), height(높이)
+        td 태그의 width 값은 가장 큰 값기준으로 너비가 정해진다. (같은 열에만 적용)
+    -->
+<body bgcolor="#FFDDDD">
+    <table border="1">
+        <tr>
+            <td width="100" height="50"></td>
+            <td width="100" height="50"></td>
+        </tr>
+        <tr>
+            <td width="200" height="50"></td>
+            <td ></td>
+        </tr>
+        <tr>
+            <td height="50"></td>
+            <td ></td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1">
+        <tr>
+            <td width="50" height="50" bgcolor="pink"></td>
+            <td width="200" bgcolor="black"></td>
+            <td width="50"  bgcolor="skyblue"></td>
+        </tr>
+        <tr>
+            <td height="50"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td height="50"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td height="50"></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table border="3">
+        <tr height="50">
+            <td width="30"></td>
+            <td width="30"></td>
+        </tr>
+        <tr height="50">
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+</body>
+</html>
