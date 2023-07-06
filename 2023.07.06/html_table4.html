@@ -1,0 +1,73 @@
+<!-- html_table4.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* css 영역 (css는 주석 이거 하나 있음) */
+        /* 테두리 선 1개로 만들 예정 앞서는 2줄 테두리 배웠음
+        (소괄호) {중괄호} [대괄호] 
+        css에서는 콜론 사용 (;세미 콜론, =이퀄 안됨)
+        굵기, 선의 종류(solid 실선1줄 dashed), 
+        ctrl+/주석*/
+        /* td{
+            border:1px solid pink;
+        } 
+        class명으로 선택하려면 .클래스이름 해야 됨.
+        id명으로 선택하려면 #아이디이름 해야 됨.
+
+        */
+
+        .item{
+            border: 2px dashed gray;
+            width: 200px;
+            height: 50px;
+            text-align: center; /* 수평정렬 */
+            vertical-align: bottom; /* 수직정렬 */
+
+        }
+        #box{
+            border-spacing: 0;
+            background-color: skyblue;
+        }
+        .item:hover{
+            background-color: darkcyan; /* 마우스오버: 마우스 커서가 위에 있다면 색깔 변함 
+            (추가적으로 글씨 등 색깔 모형 여러가지도 바꿀 수 있음) */
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- css에서 html 태그에 모양을 주려면 어떤 태그에 적용할 것인지 '선택'해야한다.
+    css의 선택자라고 하는데 어떤 태그를 선택할 것인지 선택자로 선택한다.
+    선택자의 종류로는
+        태그이름, id, class, name 등이 있다.
+        (태그 이름으로 하면 전체 태그에 적용됨. 특정된 태그만 하는게 아님
+        id, class는 어떤 태그든 값을 다 가질 수있음. 태그 이름이 태이블이고 별도의 이름을 지어주는 것임
+        별도 이름을 하나 지어주는 것임. 그러면 그 지어준 이름 하나만 적용됨.
+        대신 html 파일에 유일한 이름이어야 한다. 중복x. 어떤 태그든 유일하게 1개만 가능
+        ex-id를 a라고 부여한다면 그 외 태그 이름에 a라고 하면 안됨
+        그러나 class는 다른 태그에서 똑같은 이름 가능. 그룹으로 부를 수 있음.)
+        td와 td 사이의 간격이 있는데 없도록 하는 방법도 있음. 테두리 선쪽의 여백.
+        table 안에 있는 모든 td 이니 table 가지고 있는 요소이기에 table에서 제거해야함
+        테두리선 border
+
+        -->
+    <table id="box">
+        <tr>
+            <td class="item">1</td>
+            <td class="item">2</td>
+            <td class="item">3</td>
+        </tr>
+        <tr>
+            <td class="item">4</td>
+            <td class="item">5</td>
+            <td class="item">6</td>
+        </tr>
+    </table>
+</body>
+</html>

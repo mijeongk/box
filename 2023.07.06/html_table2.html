@@ -1,0 +1,124 @@
+<!-- html_table2.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 최대 칸수, 줄수 세서 넣기
+너비 최대 많은 칸수 있는 곳에 너비 넣기
+칸으로 합치기 => 합치는 칸 이후 td 지우기. 
+한 줄에서 칸과 합치는칸 colspan="" '열'과 '열'을 합친다
+안에 숫자는 합치는 칸 갯수
+rowspan 줄이 합쳐지며 각 tr의 줄을 1개씩 없앤다
+-->
+    <table border="1">
+        <tr height="80">
+            <td></td>
+            <td colspan="4"></td>
+        </tr>
+        <tr height="80">
+            <td></td>
+            <td colspan="4"></td>
+        </tr>
+        <tr height="80">
+            <td width="50" rowspan="4"></td>
+            <td width="80"></td>
+            <td width="30" colspan="3"></td>
+        </tr>
+        <tr height="80">
+            <td rowspan="3"></td>
+            <td colspan="2"></td>
+            <td></td>
+        </tr>
+        <tr height="80">
+            <td width="30"></td>
+
+            <td width="30"></td>
+            <td width="300"></td>
+        </tr>
+        <tr height="80">
+            <td></td>
+
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <hr>
+    <table border="1">
+        <tr height="100">
+            <td width="100"></td>
+            <td width="100" colspan="3"></td>
+
+
+        </tr>
+        <tr height="100">
+            <td width="100" rowspan="3"></td>
+            <td width="100" rowspan="2"></td>
+            <td width="100"></td>
+            <td width="100" rowspan="2"></td>
+        </tr>
+        <tr height="100">
+
+
+            <td></td>
+
+        </tr>
+        <tr height="100">
+
+            <td colspan="3"></td>
+
+
+        </tr>
+    </table>
+    <hr>
+    <!-- th: table head 기본적으로 굵게 표시됨, 가운데 정렬
+    td는 기본정렬 위치 왼쪽 열의 제목으로 넣으려면 th로 넣어주기-->
+    <table border="1">
+        <tr>
+            <th width="50">번호</th>
+            <th width="200">이름</th>
+            <th width="100">성적</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>김유신</td>
+            <td>89</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>이순신</td>
+            <td>98</td>
+        </tr>
+    </table>
+    <!-- 높이나 너비 1개만 있으면 비율 알아서 잡힘 img 태그는 종료 태그 없음-->
+    <img src="./cat.jpg" width="700" alt="cat">
+    |<!-- video 태그는 종료태그 있음 이미지와 같이 scr로 경로 넣어 준 후, 
+    요즘에는 유튜브 영상 많이 넣음 영상 코드 복사
+    만약 안되면 제목이나 이런 곳에 따옴표 있어서 안되는 것임
+    그래서 제목 잘 지어야 함
+-->
+    <video src="">
+
+    </video>
+    <br>
+    <video control="controls" width="500">
+        <source src="" type="video/mp4">
+    </video>
+
+    <iframe width="1237" height="696" src="https://www.youtube.com/embed/FgSdMsejAKI" title="[옥지의 퇴마록] EP.2 사라진 빵빵이"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+
+    <audio src=""></audio>
+    <!-- pdf 파일 보여주는 브라우저만 가능하다?-->
+    <object width="500" data="./.jpg"></object>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!-- 여러곳을 동시에 똑같이 수정하고 싶을 때는 alt 누르고 마우스로 클릭후,
+    지우거나 입력하면 동시에 이뤄짐
+    table로 만들면 브라우저 크기를 줄일 때 같이 줄어듦. 작아지지 않게 하는 방법 있음(나중에)
+    ul style="display:flex; list-style:none; 점 사라지고 옆으로 글씨가 위치됨
+    글씨 간격 벌리기 위해 ul 부분에 justify-content: space-between; 삽입
+    table 안에 높이나 너비 한개만 하면 이미지의 본 크기로 나옴
+    이미지가 뭉개지지 않고 표에 맞는 크기를 넣기 위해서
+    style="text-align: center; 글씨 가운데 정렬 
+    (b나 strong 태그 등에서 안됨. 안되지만 되게끔할수도있음)
+-->
+
+<body>
+    <table border="1">
+        <tr height="100">
+            <td>
+                <img src="./cat.jpg" width="300" height="100">
+            </td>
+            <td colspan="3">
+                <ul style="display:flex; list-style:none; justify-content: space-around;">
+                    <li>카페 메뉴</li>
+                    <li>커피이야기</li>
+                    <li>창업문의</li>
+                    <li>고객센터</li>
+                </ul>
+            </td>
+
+
+        </tr>
+        <tr height="300">
+            <td colspan="3">
+                <img src="./moon.jpg" height="300" width="900">
+            </td>
+
+
+            <td rowspan="3" width="200">
+                <h3 style="text-align: center;">지역별 점포현황</h3>
+                <dl style="text-align: center;">
+                    <dt><b>수도권</b></dt>
+                    <dd>서울</dd>
+                    <dd>인천</dd>
+                    <dd>경기</dd>
+                    <dd>분당</dd>
+                    <dt><b>충청도</b></dt>
+                    <dd>대전</dd>
+                    <dd>청주</dd>
+                    <dd>아산</dd>
+                    <dd>옥천</dd>
+                </dl>
+            </td>
+        </tr>
+        <tr height="200">
+            <td width="300">
+                <ul>
+                    <li>공지사항1</li>
+                    <li>공지사항2</li>
+                    <li>공지사항3</li>
+                    <li>공지사항4</li>
+                </ul>
+            </td>
+            <td width="300">
+                <img src="./puppy.jpg" height="200" width="300">
+            </td>
+            <td width="300">
+                <ol>
+                    <li>인기메뉴1</li>
+                    <li>인기메뉴2</li>
+                    <li>인기메뉴3</li>
+                    <li>인기메뉴4</li>
+                    <li>인기메뉴5</li>
+                </ol>
+            </td>
+
+        </tr>
+        <tr height="100">
+            <td colspan="3"></td>
+
+
+
+        </tr>
+    </table>
+</body>
+
+</html>
