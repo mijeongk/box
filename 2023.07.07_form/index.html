@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>삼성전자 공채 입사지원폼</title> <!--필수-->
+        <meta charset="utf-8" /> <!--필수. 글씨 깨지지 않기 위해서.-->
+        <meta name="author" content="Mijeong Kang" />
+        <meta name="keywords" content="삼성, 삼성전자, 공채 ,입사지원" />
+        <meta name="discription" content="삼성전자 2023년도 공채 입사지원 페이지" />
+    </head>
+    <!--head 내용 중..
+        meta: 닫는 태그 없음
+        name=""속성. ""안에는 값-->
+    <!--body 내용 중..
+        form(양식) action
+        get 엽서(내용 보임). post 봉투(내용 안보임)
+        input 입력요소. 닫는 태그 없음. type 꼭 필요
+        (type: text, number, chechbox, file... 여러개임)
+        기본값(default)이 text임
+        name=""name이라고 하지 않는 이유는 괜히 헷갈릴까봐 uswerName으로 뒀음
+        *이름 짓는 규칙
+        1. 영어와 숫자만 쓰기
+        2. 특수문자 사용 금지(띄어쓰기 포함)
+        3. 이미 있는 이름과 겹치면 안됨
+        4. 내용이 가늠 되는 이름으로 만든다.
+        user name (x) 띄어쓰기 함부로 쓰지 못할 때도 있음
+        user_name (sneack case)
+        userName (camel case)
+        enter키 무시, 띄어쓰기 1번만 가능 why? 웹에 다 반영되서..
+        한줄 전체를 다 사용 하는 것 블록
+        인라인블록?
+        breakline(그냥 줄바꿈이 아니라 강제 줄바꿈)
+    -->
+    <body>
+        <form action="apply.jsp" method="">
+            성명 : <input type="text" name="userName"/>
+            <br /> 
+            아이디 : 
+        </form>
+    </body>
+</html>
