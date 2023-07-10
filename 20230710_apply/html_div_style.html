@@ -1,0 +1,55 @@
+<!--파일명 : html_div_style.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/div.css" />
+
+</head>
+<!--div: 한줄 전체, 한 블럭 전체를 사용함. 그 외 가지고 있는 것 없음(자유롭게 꾸밀 수 있음. 대부분 레이아웃 div사용)
+h1: 태그도 한블럭 사용. 굵게, 강조 들어있음-->
+
+<body>
+    <!--
+        대게 사용하는 해상도: full-hd 이것을 기준으로 만든다. 
+        pc는 1920px 중 보기 좋은 너비. 너비가 1200-900이다. 브라우저 너비 다쓰는게 아니라 너비 정해두고 쓰는 것이다.
+        가장 바깥쪽의 너비 먼저 정하고 안에꺼 정하는 것이다.
+        네모로 만들어진 것은 거의다 div로 만든다. div 안에 div로 ... 만듦
+        !!!이미지든 글씨든 무조건 div를 이용해 자리 잡고 넣는 것이다!!!
+        ㅜ.ㅜ 많이 만들어봐야지 div 넣는 것 감 익힌다! 파이팅!@
+        div 안에 div 2개 넣을 경우 박스가 한줄다 쓰는데 다음줄에 div 또 있으니 겹쳐서 뜨게 됨 
+        div 위치를 수평으로 정렬,배치할거임
+        로고 반드시 6:4
+    -->
+    <div id="wrap">
+        <div id="box1">
+            <div class="logo_box">
+                <img src="./images/logo2.png" />
+            </div >
+            <div class="menu_box">
+                <ul class="menu">
+                    <li class="menuTitle">동물보호</li>
+                    <li class="menuTitle">입양공고</li>
+                    <li class="menuTitle">참여문의</li>
+                    <li class="menuTitle">오시는길</li>
+                    <li class="menuTitle">소개</li>
+                </ul>
+            </div>
+        </div>
+        <div id="box2">
+            두번째 div입니다.
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- li# =>id or li. class
+li.menuTitle*5
+li#aa&*5-->
+<!--float 단점 부모태그와 떨어지게된다 보통 글자  21.33 float이용해서 자리 잡아주는 경우 계산할것이 많다
+자식 높이 확인하고 ul에도 높이 줘야 그만컴의 공간 확보함-->

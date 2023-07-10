@@ -1,0 +1,57 @@
+#wrap{
+    width: 1000px; /* 100% 브라우저 너비에 맞게 적용됨 body 반응형 페이지는 %를 사용함 */
+    margin: 0 auto; /*  */
+    border: 1px solid black;
+}
+
+#box1{
+    border: 1px solid red;
+    height: 50px;
+    width: 100%;
+
+}
+
+#box2{
+    border: 1px solid blue;
+    width: 300px;
+    height: 100px;
+}
+
+/* #box1, #box2{
+    text-align: center;*수평정렬 적용가능
+    vertical-align: middle;  수직정렬 적용 불가능*/ 
+
+
+/* 두 div 사이 간격을 넣고 싶을 경우 바깥여백으로 margin
+흐름상 margin으로 여백사용할 시 먼저 있던 곳에 넣기
+why? 앞에 것에 의해서 뒤에 오는 것의 위치 흐름이 달라지기 때문에
+두개의 값에 적용하기 위해서 콤마# 둘다 써주기 
+줄의 간격 주는 방법
+1. line-height를 사용하여 height(높이)와 같이하면 가운데로 옴. but 여러줄이면 사용X?
+2.
+font-weight: ; 글씨 굵기 100단위로 100-900까지 가능*/
+
+.logo_box{
+    width: 200px;
+    float: left; /*정렬 - 왼쪽 기준으로 한줄에 정렬 시키기 */    
+}
+
+.logo_box img{/* 클래스가 logo_box인 태그 밑에 있는 img 태그 선택(모든 img태그x) 하위 표시하려면 띄어쓰기 1번 */
+    /* width: 100%; 너비 200임 why? 위에 logo_box가 부모라서 부모 크기를 따른다. */
+    height: 50px; /* 너비, 높이 둘다 주면 비율 망가짐 둘 중 하나만 적거나 비율이 딱맞는것 사용하기 
+                    로고 넣을 자리 크기 먼저 생각하고 만들어야한다*/
+    
+}
+/* ul이 아닌 li에다가 float 입히기
+list에 타입 변경 none 점 없어짐
+li태그들끼리 간격 벌리기*/
+.menu{
+    list-style-type: none;
+}
+.menuTitle{
+    float: left;
+    margin-left: 80px; 
+}
+
+/* float 단점 부모태그와 떨어지게된다 보통 글자  21.33 float이용해서 자리 잡아주는 경우 계산할것이 많다
+자식 높이 확인하고 ul에도 높이 줘야 그만컴의 공간 확보함*/
