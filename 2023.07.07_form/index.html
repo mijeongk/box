@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <title>삼성전자 공채 입사지원폼</title> <!--필수-->
-        <meta charset="utf-8" /> <!--필수. 글씨 깨지지 않기 위해서.-->
-        <meta name="author" content="Mijeong Kang" />
-        <meta name="keywords" content="삼성, 삼성전자, 공채 ,입사지원" />
-        <meta name="discription" content="삼성전자 2023년도 공채 입사지원 페이지" />
-    </head>
-    <!--head 내용 중..
+
+<head>
+    <title>삼성전자 공채 입사지원폼</title> <!--필수-->
+    <meta charset="utf-8" /> <!--필수. 글씨 깨지지 않기 위해서.-->
+    <meta name="author" content="Mijeong Kang" />
+    <meta name="keywords" content="삼성, 삼성전자, 공채 ,입사지원" />
+    <meta name="discription" content="삼성전자 2023년도 공채 입사지원 페이지" />
+</head>
+<!--head 내용 중..
         meta: 닫는 태그 없음
-        name=""속성. ""안에는 값-->
-    <!--body 내용 중..
-        form(양식) action
-        get 엽서(내용 보임). post 봉투(내용 안보임)
-        input 입력요소. 닫는 태그 없음. type 꼭 필요
-        (type: text, number, chechbox, file... 여러개임)
-        기본값(default)이 text임
+        name=""속성(attribute). ""안에는 값
+        (attribute 띄어쓰기 사용 후, 여러개 사용할 수  있음)-->
+
+<!--body 내용 중..
+        form(양식) action: 
+        2가지 속성 꼭 필요(action 어디로, method(종류: get-엽서(내용 보임). post-봉투(내용 안보임)) 어떻게)
+        input 입력요소. 닫는 태그 없음. type 꼭 필요. 기본값(default) text
+        (type 종류: text, number, checkbox, file. password(글자 안보이고 땡땡떙 나옴)... 여러개임
         name=""name이라고 하지 않는 이유는 괜히 헷갈릴까봐 uswerName으로 뒀음
+        (데이터 이름 짓는 것이다, 태그한테 짓는 것 아님!)
         *이름 짓는 규칙
         1. 영어와 숫자만 쓰기
         2. 특수문자 사용 금지(띄어쓰기 포함)
@@ -28,13 +31,101 @@
         enter키 무시, 띄어쓰기 1번만 가능 why? 웹에 다 반영되서..
         한줄 전체를 다 사용 하는 것 블록
         인라인블록?
-        breakline(그냥 줄바꿈이 아니라 강제 줄바꿈)
+        br: breakline(강제 줄바꿈)
+        input type: 선택할 수 있는 종류에는 select, radio 2가지가 있다
     -->
-    <body>
-        <form action="apply.jsp" method="">
-            성명 : <input type="text" name="userName"/>
-            <br /> 
-            아이디 : 
-        </form>
-    </body>
+
+<body>
+    <form action="apply.jsp" method="post">
+        성명 : <input type="text" name="userName" />
+        <br />
+        아이디 : <input type="text" name="userId" maxlength="10" />
+        <br />
+        비밀번호 : <input type="password" name="uswerPw" />
+        <br />
+        지원부서 :
+        <select name="part">
+            <option value="">지원할 부서를 선택하세요.</option>
+            <option value="1">개발팀</option>
+            <option value="2">디자인팀</option>
+            <option value="3">총무팀</option>
+            <option value="4">인사팀</option>
+            <!--몇백이면 괜찮지만 그 이상이면 무거워지기 때문에
+                1이라는  숫자로 하면 덜 무거워짐
+                추후에 JAVAScript로 필터하여 필요없는 것 없애기 등 설비하기
+                selected 선택 출발
+                글자 갯수 제한 length
+                required 필수로 적어야 넘어감 안쓸거임 wjy? submit이랑 같이 사용됨
+                why? submit 부분에 문제 있음. 이메일 형식, 아이디 형식 등 지켰는지 유효성검사 필요
+                javasctipt에서 검사 하고 보내야한다.
+                submit은 유효성 검사 못하니 사용 안할거임-->
+        </select>
+        <br />
+        성별 :
+        <label>
+            <input type="radio" name="gender" value="1" /> 여자
+        </label>
+        <label>
+            <input type="radio" name="gender" value="0" /> 남자
+        </label>
+        <!--radio도 이미 체크하게 만드는 것 checked.-->
+        <br />
+        희망연봉 :
+        <input type="number" step="100" min="1900" max="4000" />만원
+        <!--숫자, 점만 쓸 수 있음. but 알파벳e는 사용 가능. 지수 표기법
+            step 단위. 최대 최소. 숫자 쓸 수는 있음-->
+        <br />
+        취미 :
+        <label><input type="checkbox" name="hobby" value="cli" />등산</label>
+        <label><input type="checkbox" name="hobby" value="arc" />양궁</label>
+        <label><input type="checkbox" name="hobby" value="wrt" />서예</label>
+        <label><input type="checkbox" name="hobby" value="gam" />게임</label>
+        <label><input type="checkbox" name="hobby" value="rea" />독서</label>
+        <!--이미 체크 되어있는 박스 만들고 싶을 때 checked. 읽기 전용으로만 하면 해제 못함 
+            속성뒤에 보통 값 넣지만 checked, disabled 값 필요로 하지 않는 속성 존재
+            but disable 전송 못함 ctrl+/는 주석으로 변함
+            placeholder는 글씨 칸에 넣어야하며 글씨 쓰면 없어짐-->
+        <br />
+        생년월일 :
+        <input type="text" name="year" placeholder="예) 1992" />년
+        <input type="text" name="month" />월
+        <input type="text" name="date" />일
+        <br />
+        <input type="date" name="birth" />
+        <!-- <input type="button" value="지원하기" /> -->
+        <!-- button은 기능 없음. 자료에 대한 점검은 javascript에서 함.버튼 태그 함 -->
+        <br />
+        자기소개서 :
+        <textarea name="essay" placeholder="300자 미만으로 작성하시오."></textarea>
+        <!--textarea는 텍스트 여러 띄어쓰기 엔터키 살아있음-->
+        <br />
+        국적 :
+        <select name="nation">
+            <option value="">국적을 선택하세요.</option>
+            <optgroup lable="아시아">
+                <option value="1">대한민국</option>
+                <option value="2">일본</option>
+                <option value="3">중국</option>
+            </optgroup>
+            <optgroup lable="아메리카">
+                <option value="4">미국</option>
+                <option value="5">멕시코</option>
+                <option value="6">캐나다</option>
+            </optgroup>
+            <optgroup lable="아프리카">
+                <option value="7">케냐</option>
+                <option value="8">가나</option>
+                <option value="9">남아프리카공화국</option>
+            </optgroup>
+            <optgroup lable="유럽">
+                <option value="10">영국</option>
+                <option value="11">이탈리아</option>
+                <option value="12">프랑스</option>
+            </optgroup>
+        </select>
+        <br />
+        <button type="submit">제출하기</button>
+    </form>
+</body>
+
 </html>

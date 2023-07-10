@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>엘지전자 2023년도 공채 입사지원 페이지</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Mijeong Kang" />
+    <meta name="keyword" content="엘지, 엘지전자, 공채, 입사지원, lg" />
+    <meta name="description" content="엘지전자 2023년도 공채 입사지원 페이지" />
+    <link href="css/style.css" rel="stylesheet" />
+    <!--hyperlink reference 하이퍼링크 참조(주소) 위치 가르키는 것 href
+        img src=image/dog1.jpg" 가지고 와서 보여줘야하는 것 src-->
+</head>
+
+<body>
+    <form id="apply" action="apply.php" method="get">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td><input type="text" name="userId" /></td>
+            </tr>
+            <tr>
+                <td>비밀번호</td>
+                <td><input type="password" name="userPw"></td>
+            </tr>
+            <tr>
+                <td>성명</td>
+                <td><input type="text" name="userName" /></td>
+            </tr>
+            <tr>
+                <td>생년월일</td>
+                <td><input type="date" name="userBitrh" /></td>
+            </tr>
+            <tr>
+                <td>지원부서</td>
+                <td>
+                    <select name="part">
+                        <option value="">지원부서 선택</option>
+                        <option value="1">개발팀</option>
+                        <option value="2">디자인팀</option>
+                        <option value="3">컨설팅팀</option>
+                        <option value="4">경영지원팀</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>희망연봉</td>
+                <td>
+                    <input type="number" step="100" min="1900" max="4000" />만원
+                </td>
+            </tr>
+            <tr>
+                <td>국적</td>
+                <td>
+                    <select name="nation">
+                        <option value="1">대한민국</option>
+                        <option value="2">일본</option>
+                        <option value="3">중국</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>자기소개서</td>
+                <td>
+                    <textarea name="essay" placeholder="300자 미만으로 작성하시오."></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">제출버튼</button>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
