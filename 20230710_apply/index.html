@@ -14,25 +14,25 @@
 
 <body>
     <form id="apply" action="apply.php" method="get">
-        <table>
+        <table id="resume">
             <tr>
-                <td>아이디</td>
-                <td><input type="text" name="userId" /></td>
+                <td class="title">아이디</td>
+                <td><input type="text" name="userId" class="need" /></td>
             </tr>
             <tr>
-                <td>비밀번호</td>
-                <td><input type="password" name="userPw"></td>
+                <td class="title">비밀번호</td>
+                <td><input type="password" name="userPw" class="need"></td>
             </tr>
             <tr>
-                <td>성명</td>
-                <td><input type="text" name="userName" /></td>
+                <td class="title">성명</td>
+                <td><input type="text" name="userName" class="need" /></td>
             </tr>
             <tr>
-                <td>생년월일</td>
+                <td class="title">생년월일</td>
                 <td><input type="date" name="userBitrh" /></td>
             </tr>
             <tr>
-                <td>지원부서</td>
+                <td class="title">지원부서</td>
                 <td>
                     <select name="part">
                         <option value="">지원부서 선택</option>
@@ -44,32 +44,42 @@
                 </td>
             </tr>
             <tr>
-                <td>희망연봉</td>
+                <td class="title">희망연봉</td>
                 <td>
-                    <input type="number" step="100" min="1900" max="4000" />만원
-                </td>
+                    <input type="number" name="annual" step="100" min="1900" max="4000" />만원
+                    <input type="radio" name="consul" /> 면접후 결정
+                </td> <!--버튼 증가양 step radio 하나 checkbox 중복선택 가능-->
             </tr>
             <tr>
-                <td>국적</td>
+                <td class="title">국적</td>
                 <td>
+                    <input type="radio" name="nation" /> 내국인
+                    <input type="radio" name="nation" /> 외국인
                     <select name="nation">
-                        <option value="1">대한민국</option>
-                        <option value="2">일본</option>
-                        <option value="3">중국</option>
+                        <option value="1">일본</option>
+                        <option value="2">중국</option>
+                        <option value="3">기타</option>
                     </select>
+                    <!--라디오사용시 같은 네임으로 해야 1개만 선택 가능.
+                    네임이 다르면 다른 그룹으로 인식되어 여러개 선택 가능
+                    ex)                    
+                    <input type="radio" name="nation" /> 내국인
+                    <input type="radio" name="nation123" /> 외국인 => 중복 선택 가능해짐--->
                 </td>
             </tr>
             <tr>
-                <td>자기소개서</td>
+                <td class="title intro">자기소개서<br>(300자 미만)</td>
+                <!--class title 적을 때 띄어쓰기 후, 단어 적으면 이름이 2개로 검색됨. 둘다 적용가능-->
                 <td>
-                    <textarea name="essay" placeholder="300자 미만으로 작성하시오."></textarea>
+                    <!-- <textarea rows="10" cols="50" name="essay" placeholder="300자 미만으로 작성하시오."></textarea> -->
+                    <textarea id="selfIntro" placeholder="300자 미만으로 작성하시오."></textarea>
                 </td>
             </tr>
             <tr>
                 <td colspan="2">
                     <button type="submit">제출버튼</button>
                 </td>
-                <td></td>
+                
             </tr>
         </table>
     </form>
