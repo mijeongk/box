@@ -8,8 +8,42 @@
     border: 1px solid red;
     height: 50px;
     width: 100%;
-
+    display: flex; /* 여기 넣으면 자식태그에만 적용 */
+    justify-content: start; /* 기준 상태(start,center,end). 기본상태 start. */
+    align-items: center; /* 부모태그로 기준을 잡아야함 */
 }
+
+/*  현재 사용 빈도수 많음
+    flex는 레이아웃 구성, 현재실무에서 태그를 배치하는 방법 중 하나이다.
+    display:flex가 적용된 태그는 부모태그(flex 컨테이너) 라고 한다.
+    flex가 적용된 태그의 하위태그들(자식태그들)은 flex아이템이라고 한다.
+
+    flex는 주축(start왼쪽→오른쪽end), 교차축(start위↓아래end)에 의해 배치가 된다.
+    주측 기준으로 배치는 justify-content이다.
+    justify-content에는 start, center, end, space-around, space-between이 있다.
+    
+    교차축을 기준으로 배치는 align-items이다.
+    align-items에는 start, center end 등이 있다.
+
+    (부모: 주축(왼쪽→오른쪽), 교차축(위↓아래)
+    부모태그쪽에서 자식 태그들의 배치를 어떻게 하는 것인지)
+ */
+
+/* display: flex 화면에 나타내는 방식
+display 중 inline 속상 가지고 있는 태그 b, strong 크기 가지지 않음? 
+ex) <b>가나다</b> 너비, 높이 줘도 커지지 않음
+inline 태그 안에있는 텍스트 크기만큼만 표현
+(텍스트에 크기를 줄이거나 늘리는 것만 가능)
+태그 기본 디스플레이를 바꿔주면 가능하다
+
+inline_block 텍스트는 그대로 있고 텍스트
+block: div,p 태그 등 있음. 
+브라우저 크기만큼 너비 가지고있음
+
+display 2가지 방식 있음. 화면 어떻게 배치해줄것인가.
+기본 flex 한줄배치 됨.
+flex
+grid*/
 
 #box2{
     border: 1px solid blue;
@@ -33,7 +67,7 @@ font-weight: ; 글씨 굵기 100단위로 100-900까지 가능*/
 
 .logo_box{
     width: 200px;
-    float: left; /*정렬 - 왼쪽 기준으로 한줄에 정렬 시키기 */    
+    /* float: left; 정렬 - 왼쪽 기준으로 한줄에 정렬 시키기     */
 }
 
 .logo_box img{/* 클래스가 logo_box인 태그 밑에 있는 img 태그 선택(모든 img태그x) 하위 표시하려면 띄어쓰기 1번 */
@@ -45,12 +79,23 @@ font-weight: ; 글씨 굵기 100단위로 100-900까지 가능*/
 /* ul이 아닌 li에다가 float 입히기
 list에 타입 변경 none 점 없어짐
 li태그들끼리 간격 벌리기*/
+.menu_box {
+    /* width: ; */
+    width:calc( 100% - 200px ); /* 띄어쓰기 꼭 해야지 계산됨 */
+}
+
 .menu{
     list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
 }
+/*ul태그 높이는 글자높이까지만 있음  */
+
 .menuTitle{
-    float: left;
-    margin-left: 80px; 
+    /* float: left; */
+    /* margin-left: 80px;  */
 }
 
 /* float 단점 부모태그와 떨어지게된다 보통 글자  21.33 float이용해서 자리 잡아주는 경우 계산할것이 많다
