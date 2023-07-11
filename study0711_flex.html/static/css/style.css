@@ -1,0 +1,75 @@
+
+.item:nth-child(1) {
+    background: pink;
+}
+.item:nth-child(2) {
+    background: beige;
+}
+.item:nth-child(3) {
+    background: skyblue;
+}
+.item:nth-child(4) {
+    background: salmon;
+}
+
+#box1 {
+    width: 500px;
+    height: 200px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#box1 
+.item {
+    width: 50px;
+    height: ;
+}
+
+#box2 {
+    width: 500px;
+    height: 200px;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* start 등으로 하면 안보임. why? 높이 없어서 
+    위->밑으로 stretch 부모의 높이만큼 꽉 채워라. 
+    높이 지정되어있으면 stretch 적용 안됨
+    이후에 start 등 보임*/
+}
+
+#box2 
+.item {
+    width: 50px;
+    height: 50px; /*높이 지정되어있으면 stretch 적용 안됨*/
+}
+
+#box3 {
+    width: 500px;
+    height: 200px;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+/* 열 방향 바뀜 column */
+
+#box3 
+.item {
+    width: 50px;
+    height: 30px;
+}
+
+#box3 .item:nth-child(3) {
+    order:1; /* direction이 column이면 order로 순서를 정할 수 있다. */
+}
+
+#box3 .item:nth-child(1) {
+    order:2;
+}
+
+/* 현재 주측이 row이니 바꾸면 
+주측  */

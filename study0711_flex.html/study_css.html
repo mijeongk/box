@@ -1,0 +1,54 @@
+<!--파일명 : study_css.html -->
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            .imgWrap{
+                width: 300px;
+                height: 300px;
+                background: url(https://picsum.photos/500/500);
+                transition: all 0.3s linear;
+                /* transition 효과 all(변화되는 속성) 너비 높이 같이 커짐
+                (width or height 만 설정할수도있음) */
+            }
+            .img_box:hover .imgWrap{
+                transform: scale(1.5); 
+            }
+            .img_box{
+                width: 300px;
+                overflow: hidden;
+            }
+
+            #red{
+                background: red;
+                width: 100px;
+                height: 100px;
+                transition: width 1s linear;
+                /* transition은 hover에 주는게 아니당! */
+            }
+            #red:hover{
+                width: 300px;
+            }
+
+        </style>
+            <!-- 마우스 올리면 hover기능으로 사진 전체 보임
+                width: 500px;
+                height: 500px; 
+                transform: scale(1.5); 너비 높이 같이 커짐-->
+    </head>
+    <body>
+        <h3> 이미지 줌 아웃 </h3>
+        <div class="img_box">
+            <div class="imgWrap">
+
+            </div>
+        </div> 
+        <div id="red">
+
+        </div>
+    </body>
+</html>

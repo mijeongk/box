@@ -23,7 +23,7 @@
     justify-content에는 start, center, end, space-around, space-between이 있다.
     
     교차축을 기준으로 배치는 align-items이다.
-    align-items에는 start, center end 등이 있다.
+    align-items에는 start, center end 등이 있다. (수직으로 간격 일정하게 하는 것)
 
     (부모: 주축(왼쪽→오른쪽), 교차축(위↓아래)
     부모태그쪽에서 자식 태그들의 배치를 어떻게 하는 것인지)
@@ -45,10 +45,25 @@ display 2가지 방식 있음. 화면 어떻게 배치해줄것인가.
 flex
 grid*/
 
-#box2{
-    border: 1px solid blue;
+/* 
+flex에서 수평 배치를 하려면 주측 기준으로 해야한다.
+주축은 justify-content
+*/
+
+#box2 {
+    width: 100%;
+    display: flex; /* 한줄로 다 나옴. 기본 한줄배치 */
+    /* flex-wrap: nonrap; 기본상태가 이거임*/
+    flex-wrap: wrap; /* 여러줄 배치 하려면 wrap 설정  */
+    justify-content: space-between;
+    row-gap: 50px; /* 줄간격 */
+}
+
+.items {
     width: 300px;
-    height: 100px;
+    /* overflow: hidden;  */
+    /* div크기보다 이미지가 클 경우  */
+    /* 이미지가 밖으로 나오는게 보임 안보이게하려면 hidden 사용 */
 }
 
 /* #box1, #box2{
@@ -86,7 +101,7 @@ li태그들끼리 간격 벌리기*/
 
 .menu{
     list-style-type: none;
-    display: flex;
+    display: flex; /* 보통 1줄 배치*/
     margin: 0;
     padding: 0;
     justify-content: space-around;
