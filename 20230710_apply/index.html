@@ -13,11 +13,100 @@
 </head>
 
 <body>
+
+    <div id="box1">
+        <p>동해물과 백두산이</p>
+        <p>마르고 닳도록</p>
+        <p>하느님이 보우하사</p>
+        <p>우리나라 만세</p>
+    </div>
+
+    <div id="box2">
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+    </div>
+<!--th table 제목-->
+    <table id="grade">
+        <tr>
+            <th>성명</th>
+            <th>수학</th>
+            <th>과학</th>
+        </tr>
+        <tr>
+            <td>김태희</td>
+            <td>95</td>
+            <td>92</td>
+        </tr>
+        <tr>
+            <td>한지호</td>
+            <td>100</td>
+            <td>100</td>
+        </tr>
+    </table>
+
+    <table id="spec">
+        <tr>
+            <th>무게</th> <!--th 가운데 정렬, 굵게-->
+            <td>21.5kg</td>
+            <th>가로길이</th>
+            <td>1,200mm</td>
+        </tr>
+        <tr>
+            <th>세로</th>
+            <td>200mm</td>
+            <th>소비전력</th>
+            <td>2W/h</td>
+        </tr>
+    </table>
+
+
+    <div id="box3">
+        <div>ddd</div>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <div>ddd</div>
+        <p>ddd</p>
+        <p>ddd</p>
+        <div>ddd</div>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <p>ddd</p>
+        <div>ddd</div>
+    </div>
+
+    <p id="p1">asdasd</p>
+    <p class="p2">asddasd</p>
+    <p class="p2">asddasd</p>
+    <div id="parent">
+        <p>adasd</p>
+        <p>adasd</p>
+        <span>asd</span><!--인라인요소-->
+        <span>asd</span><!--인라인요소-->
+    </div>
+    
+    <!-- <a href="html_div_style.html">링크</a>내부 -->
+    <a href="http://naver.com">링크</a>
+    <!--hypertext transfer protocol
+    통신을 위한 약속 hypertext를 주고받는 통신 
+    일정시간 지나면 지워지는 것임. 브라우저 씀
+    ftp://
+    file transfer protocol 파일 주고받는 것
+    웹서버 분양. 일정 돈 지불하면 웹서버 대용. hosting.-->
     <form id="apply" action="apply.php" method="get">
         <table id="resume">
             <tr>
                 <td class="title">아이디</td>
-                <td><input type="text" name="userId" class="need" /></td>
+                <td><input type="text" name="userId" class="need" /></td> <!--need 필수로 적어야 하는 공간-->
             </tr>
             <tr>
                 <td class="title">비밀번호</td>
@@ -53,8 +142,8 @@
             <tr>
                 <td class="title">국적</td>
                 <td>
-                    <input type="radio" name="nation" /> 내국인
-                    <input type="radio" name="nation" /> 외국인
+                    <input type="radio" name="nation" value="1" /> 내국인
+                    <input type="radio" name="nation" value="0" /> 외국인 <!--둘 중하나만 선택해서 할 떄 0과 1 사용함 true=1 ↔ 0 -->
                     <select name="nation">
                         <option value="1">일본</option>
                         <option value="2">중국</option>
@@ -79,6 +168,7 @@
                 <td colspan="2">
                     <button type="submit">제출버튼</button>
                 </td>
+                <!--button type 꼭 써야한다 ex) type 안쓰고 submit만 예로 로그인 할 때 부적합할시 경고창 뜨지만 창 넘어감-->
                 
             </tr>
         </table>
