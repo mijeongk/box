@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <!--head와 body는 html의 자식요소이다(그러니 들여쓰기 해주기!)-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>가상요소</title>
+        <meta name="author" content="Mijeong Kang" />
+        <meta name="keyword" content="css, 선택자, 가상요소, 일부분" />
+        <meta name="description" content="CSS의 선택자 중 가상요소를 사용하여 해당 요소의 일부분을 선택할 수 있다." />
+        <link href="./css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <p id="para1">빨간맛 궁금해 허니</p>
+        <ul id="list1">
+            <li>20,000</li>
+            <li>30,000</li>
+            <li>150,000</li>
+            <li>15,000</li>
+            <li>3,000</li>
+            <!--글머리표가 화면 밖으로 나가서 안보임 
+            why? css에서 margin 0으로 둠
+            보이려면 margin을 줘야함-->
+        </ul>
+       <button id="clsBtn" type="button"></button> 
+       <!--button기본값, 배경색 회색, border, radius 있음-->
+    </body>
+</html>
