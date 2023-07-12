@@ -3,10 +3,9 @@
 #wrap {
     width: 1200px;
     height: 0 auto;
+    margin: 0 auto;
     border: 1px solid black;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #box1 {
@@ -41,29 +40,32 @@
     width: 1000px;
     height: 1000px;
     border: 1px solid black;
-    /* flex-wrap: wrap;
-    justify-content: center;
-    align-items: center; */
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
 }
 
 .img_box1 {
-    width: 1000px;
+    width: 100%;
     height: 400px;
     border: 1px solid black;
     display: flex;
-    /* flex-wrap: wrap; */
 }
 
 .imgs {
     width: 300px;
     height: 300px;
-    /* flex-wrap: wrap; */
     justify-content: space-around;
     align-items: center;
 
 }
 
 .img-box2 {
-    width: 300px;
-
+    width: 100%;
+    height: 600px;
+    border: 1px solid black;
+    display: flex;
 }
+
+:nth-child()
+

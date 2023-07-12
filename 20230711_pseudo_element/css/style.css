@@ -33,6 +33,10 @@ ex) <img/>은 사용할 수  없음*/
 #clsBtn {
     width: 50px;
     height: 50px;
+    position: relative;
+
+    /* 부모요소는 position 하면 안됨 relative로 */
+
 }
 
 #clsBtn::before, 
@@ -42,18 +46,47 @@ ex) <img/>은 사용할 수  없음*/
     width: 50px;
     height: 3px;
     background: red;
-
     position: absolute;
-    left: 50%;
+    left: 50%; /*화면크기의 절반*/
     top: 50%;
-    transform: translate(-50%,-50%);
+    transition: all 0.4s; /* 전환효과. 스타일바뀌면 스무스하게 바꾸겠다. interaction */
+    /* transform: translate(-50%,-50%); 자기 가로,높이길이의 정중앙. -는 왼쪽으로 */
+    /*
+    position 기본값: static 움직이지 않음. 움직이려면 다른 단어 기입
+    position: relative; 상대적. 원래 있던 위치(basecamp)에서 시작.
+    left: 100px;
+    top: 50px;
 
-}
+    position: absolte; basecamp(집 없음. 공중에? 떠있기는 함). 좌상에 끝을 기준으로 움직임 
+    만약 여러 박스 a,b,c가 있을 때 b가 ab..면 c가 앞으로 옴
+    left: 100px;
+    top: 50px;
+    
+    ex)right: 0; <=오른쪽에있음 bottom: 100;
 
-/*인라인
-    가운데 
+    부모가 static 아닌 relative이거나 absolute면 경우가 다르다.
+    이런경우는 b의 부모를 기준으로 움직인다.
+
+    화면 가운데 공식!ㅎ.ㅎ! 
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
 */
+
+}
+
+#clsBtn::before {
+    transform: translate(-50%,-50%) rotate(45deg); /* rotate만 쓰면 translate 앞에 적어놓은 것 덮여지니 순서 맞춰서 기입 */
+}
+
+#clsBtn::after {
+    transform: translate(-50%,-50%) rotate(-45deg); /* rotate만 쓰면 translate 앞에 적어놓은 것 덮여지니 순서 맞춰서 기입 */
+}
+
+#clsBtn:hover::before, 
+#clsBtn:hover::after {
+    transform: translate(-50%,-50%) rotate(0deg);
+    width: 30px;
+    height: 30px;
+}

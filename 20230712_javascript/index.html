@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Javascript 사용해보기</title>
+        <meta name="author" content="Mijeong Kang" />
+        <meta name="keyword" content="javascript, 인터프리터 언어, 프로그래밍 언어" />
+        <meta name="description" content="HTML문서에 자바스크립트를 연결하여 HTML 요소와 스타일 요소를 콘트롤할 수 있다." />
+    </head>
+    <body>
+
+        
+        <script>
+
+
+            //객체.속성
+            //var age = 오딘.토르.나이; // get
+            //오딘.토르.나이 = 20; // set
+            //객체.메소드(함수)
+            //오딘.토르.노래("내 나이가 어때서"); // 함수
+
+            
+            //escape character 기호를 기호자체로 넣고 싶을 때 p...
+
+            // var: 지금부터 변수를 만들겠다.
+            // 변수, 함수 이름 짓는 규칙
+            // 1. 영어와 숫자만 사용
+            // 2. 첫번째 글자는 영어(숫자로 시작하면 안됨)
+            // 3. 이미 있는 이름과 겹치면 안됨
+            // 4. 내용 또는 의도를 가늠할 수 있는 이름 짓기 ex) boxWidth
+            // 5. 띄어쓰기, 특수 문자 금지(_는 사용 가능)
+            // var boxWidth; // undefined 정의되지 않았다. = 비어있다. 반대로 비어있다는 것으로 하고 싶다할 때 undefined로 적을 수 있음
+            // boxWidth = "Hello World"; // width에 3을 넣겠다 라는 set 의미. 이름 위와 같이 
+            // alert(boxWidth);
+
+            // var marriage = flase;
+            // if(marriage){
+            //     alert("결혼을 축하합니다");
+            // }else{
+            //     alert("잘 사세요");
+            // }
+            // 배열은 []
+
+            var score = [95, "미응시", 65, 93, null];
+            alert( score[1] );
+
+            // var floor;
+            // var room;
+            // var target = "ㅇ";
+            // var apart = [
+            //     ["ㄱ", "ㄴ", "ㄷ", "ㄹ", "ㅁ"],
+            //     ["ㅂ", "ㅅ", "ㅇ", "ㅈ", "ㅊ"],
+            //     ["ㅋ", "ㅌ", "ㅍ", "ㅎ", "ㅏ"],
+            //     ["ㅑ", "ㅓ", "ㅕ", "ㅗ", "ㅛ"],
+            //     ["ㅜ", "ㅠ", "ㅡ"]
+            // ];
+            // for(i=0; i<apart.length; i++){
+            //     for(j=0; j<apart[i].length; j++){
+            //          if(apart[i][j] == target){
+            //                  floor = i+1;
+            //                  room = j+1;
+            //                  break;
+            //              }
+            //         }
+            // } 몇번째까지 반복했는지, 몇번 반복했는지
+            // alert("ㅇ는 "+floor+"층, "+room+"호실에서 발견됨");
+
+            // 객체는 {중괄호} 사용
+            var jiho = {
+                age: 22, 
+                height: 175, 
+                weight: 76, 
+                salary: 280, 
+                marriage: false,
+                essay: "안녕하시요. 한지호라는 사람이올시다.",
+                score: [95, 80, 75, 65, 45]
+            };
+            alert( "지호의 키 : " + jiho.height );
+            alert( jiho.score[1] );
+
+            // 객체형 변수도 쓸 수 있어야함
+
+            var employee = [
+                {
+                    name:"김일호", 
+                    rank:"부장",
+                    title:"팀장",
+                    salary:450
+                }, 
+                {
+                    name:"김삼순", 
+                    rank:"과장",
+                    title:null,
+                    salary:380
+                }, 
+                {
+                    name:"임꺽정", 
+                    rank:"대리",
+                    title:null,
+                    salary:320
+                }
+            ];
+            alert( employee[0].salary )
+        </script>
+    </body>
+</html>
