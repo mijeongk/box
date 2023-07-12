@@ -67,17 +67,24 @@
 
             //국어, 수학, 영어 3과목의 점수를 입력받아 총점을 출력하시오.
 
-            var kor = Number(prompt("국어 점수를 입력하세요."));
-            var mat = parseInt(prompt("수학 점수를 입력하세요."));
-            var eng = parseInt(prompt("영어 점수를 입력하세요."));
+            // var kor = Number(prompt("국어 점수를 입력하세요."));
+            // var mat = parseInt(prompt("수학 점수를 입력하세요."));
+            // var eng = parseInt(prompt("영어 점수를 입력하세요."));
 
-            var total = kor + mat + eng;
+            // var total = kor + mat + eng;
 
-            document.write("총점 : <b>"+total+"</b>점");
+            // document.write("총점 : <b>"+total+"</b>점");
 
             // 오늘의 과제
             // 사각형의 너비와 높이를 입력받아서 넓이가 얼마인지 출력하시오.
+            
+            var width = parseInt(prompt("사각형의 너비를 입력하세요."));
+            var height = parseInt(prompt("사각형의 높이를 입력하세요."));
 
+            var area = width * height;
+
+            document.write("사각형의 넓이: <b>"+area+"</b>");
+            
         </script>
     </head>
     <body>
