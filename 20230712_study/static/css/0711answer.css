@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* 태그의 테두리선을 너비 또는 높이에 포함시킨다.
+너비를 100px border를 1px 했다면 총 너비 102px 
+하지만 box-sizing:border-box가 적용되면 총 너비는 100px*/
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    height: 0 auto;
+    display: flex;
+}
+
+#side{
+    width: 20%;
+    background: rgba(200, 0, 0, 0.3);
+}
+
+#content{
+    width: 80%;
+    background: rgba(0, 200, 0, 0.3);
+    padding: 80px 20px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+#side .menu_box{
+    width: 100%;
+    padding: 50px 0;
+} 
+/* 부모태그로 위치 잡아야한다.. */
+
+#side .menu_box .menu_list{
+    font-size: 20px;
+    text-align: center;
+}
+
+#content .top{
+    background: rgba(0, 200, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 15px;
+    margin-bottom: 30px;
+}
+
+/* columns-gap, row-gap 동일하게 주려면 gap 사용 */
+
+#content .top .img_box {
+    width: 32%;
+    overflow: hidden;
+}
+
+#content .bottom{
+    background: rgba(100, 100, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+}
+
+#content .bottom .left, 
+#content .bottom .right{
+    width: 20%;
+    height: 400px;
+    background: rgba(246, 243, 43, 0.3);
+}
+
+#content .bottom .middle{
+    width: 54%;
+    height: 400px;
+    background: rgba(228, 30 ,30 , 0.62);
+    color: #fff;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 위치는 부모가 크기는 자식이 */

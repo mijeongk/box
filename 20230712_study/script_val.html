@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script type="text/javascript">
+            // 변수 - 데이터를 저장하는 메모리 공간
+            // 데이터 - 숫자, 문자
+            // 
+
+            // a=10;
+            // 나변수=20;
+            // 너도변수=30;
+            // 상현이도변수=40;
+            // bbb=50;
+            // apple="아이폰";
+            // 변수(공간) 이름(반드시 문자로 시작해야함) = 
+            // let name="강미정";
+            // mame="강해민"; // 데이터 변경 가능
+            // let name="김선경"; // 재선언 불가능(다시 똑같은 이름의 변수 불가능)
+
+            // var age=29;
+            // age=30 // 데이터 변경 가능
+            // var age=29; // 재선언 가능(다시 똑같은 이름의 변수 가능)
+            // let age=50; // var => let으로 다시 만들 수 있음
+
+            // const pi=3.14;
+            // // pi=2111; const는 데이터 변경이 안된다. (처음 입력한 데이터만 쭉 사용)
+            // 변경하면 안되는 것은 pi 사용하면된다.
+
+            // <let, var, const 정리>
+            // let 타입은 데이터 변경은 가능하지만 같은 이름의 변수를 다시 생성(재선언) 할 수 없다.
+            // var 타입은 데이터 변경은 가능하고 같은 이름의 변수를 재선언 할 수 있다.
+            // (앞에 아무것도 없을 경우기본적으로 var가 붙은 형태라고 인식)
+            // const 타입은 처음 저장한 데이터를 변경시킬 수 없고, 재선언 할 수 없다.
+
+            // 변수의 type을 지정해주는 것 let, var, const
+
+
+            // // 입력 → 저장 → 실행 → 출력
+            // // = : 대입연산자 (오른쪽의 값을 왼쪽에 저장)// name 변수가 잘 되는지 확인하려면 출력하면됨
+            // prompt: 입력창 뜬다. (함수)
+            // var name = prompt(); //입력 후 저장
+            // // alert(name); //출력
+            // // 자바스크립트에서 문자를 표현하려면 "" 또는 '' 문자를 감싸주어야한다.
+            // // (name부분을 "" 없이 쓰면 변수로 인식함)
+            // // 자바스크립트에서 html 태그는 문자로 표현할 수 있다.
+            // document.write("<b>"+name+"</b>");
+            // // document : 현재 html 문서
+            // 대소문자 꼭! 입력!
+
+            // 변수는 새로운 데이터가 발생되면 변수에 저장하기
+
+            // var number1 = prompt("숫자를 입력하세요.");
+            // var number2 = prompt("두번째 숫자를 입력하세요.");
+            // var number1 = Number(prompt("숫자를 입력하세요.")); // 문자를 숫자로 변환해주는 방법(숫자를 썼어도 문자로 인식함)
+            // var number2 = parseInt(prompt("두번째 숫자를 입력하세요.")); // 문자 껴있어도 앞쪽 숫자만 계산 가능 
+
+            // // document.write(typeof(number1)); //내가 입력한 것이 숫자인지 봐주는 것
+            // var result = number1 + number2;
+
+            // // document.write(number1 * number2);
+            // document.write(result);
+
+
+            //국어, 수학, 영어 3과목의 점수를 입력받아 총점을 출력하시오.
+
+            var kor = Number(prompt("국어 점수를 입력하세요."));
+            var mat = parseInt(prompt("수학 점수를 입력하세요."));
+            var eng = parseInt(prompt("영어 점수를 입력하세요."));
+
+            var total = kor + mat + eng;
+
+            document.write("총점 : <b>"+total+"</b>점");
+
+            // 오늘의 과제
+            // 사각형의 너비와 높이를 입력받아서 넓이가 얼마인지 출력하시오.
+
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

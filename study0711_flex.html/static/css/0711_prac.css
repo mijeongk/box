@@ -1,0 +1,24 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrap {
+    width: 1200px;
+    height: 0 auto;
+    margin: 0 auto;
+    display: flex;
+}
+
+#menu_box {
+    width: 20%;
+    height: ;
+    background: rgba(200,0,0,0.3);
+}
+
+#content {
+    width: 80%;
+    height: ;
+    background: rgba(0,200,0,0.3);
+}
