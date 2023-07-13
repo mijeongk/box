@@ -205,11 +205,11 @@
 // }
 
 var deposit = 100000;
-var monthlt = 500;
+var monthly = 500;
 var distance = 15;
 var top = true;
 var direction = "south";
-if((deposit <= 100000 && monthly <= 50 && distance <= 15) && direction ? ){
+if((deposit <= 100000 && monthly <= 50 && distance <= 15) && direction == "south"){
     alert("입주");
 }else{
     alert("입주 안함");
