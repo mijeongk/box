@@ -194,25 +194,25 @@
 // }
 
 
-var dice = Math.floor(Math.random()*6)+1;
+// var dice = Math.floor(Math.random()*6)+1;
 
-var user = inputNum("1~6 중 하나를 입력하시오.");
+// var user = inputNum("1~6 중 하나를 입력하시오.");
 
-if( user == dice){
-    document.write(("정답 "+dice));
-}else{
-    document.write("손목");
-}
+// if( user == dice){
+//     document.write(("정답 "+dice));
+// }else{
+//     document.write("손목");
+// }
 
-function inputNum(str){
-    var a = prompt(str);
-    while( isNaN(a) ){
-        alert("숫자만 입력 가능합니다.");
-        a=prompt(str);
-    }
-    a=Number(a);
-    return a;
-}
+// function inputNum(str){
+//     var a = prompt(str);
+//     while( isNaN(a) ){
+//         alert("숫자만 입력 가능합니다.");
+//         a=prompt(str);
+//     }
+//     a=Number(a);
+//     return a;
+// }
 
 // 과제
 // 주차장 요금 계산
@@ -223,4 +223,40 @@ function inputNum(str){
 // 4시간 이상 주차시 기본요금 2500원
 // 8시간 이상 주차시 무조건 5000원
 
-//주차한 시간이 총 몇분인가 입력하여 요금 출력하기
+//주차한 시간이 총 몇분인가 입력하여 요금 출력하기\
+
+// if(parkingDuration)
+
+// 10분이 증가할수록
+
+// for주차시간 기본요금= 1000, 주차시간 <;
+
+
+// var parkingDuration = (Number(prompt="주차 시간을 '분'단위로 입력하시오")){
+
+// }
+
+
+
+// var
+
+
+var time = Number(prompt("주차시간"));
+var cost = 1000;
+
+if( time >= 480 ){
+    cost=5000;
+    time=0;
+}else if( time >= 240 ){
+    cost=2500;
+    time=time-240;
+}else if( time >=120 ){
+    cost=1500
+    time=time-120;
+}else{
+    time=time-30;
+}
+
+var price = cost + (parseInt(time/10*100));
+document.write("주차요금은 : "+price);
+
