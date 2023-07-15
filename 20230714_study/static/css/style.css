@@ -4,17 +4,15 @@
     box-sizing: border-box;
 }
 ul, ol{list-style-type: none;}
-
 body{
     background:#2a283e;
-    color:#f1f3f5;
+    color:#cdcdcd;
 }
 #wrap{
     width:90%;
     max-width:1000px;
     margin:0 auto;
 }
-
 #header{
     width:100%;
     position:relative;
@@ -22,14 +20,13 @@ body{
 #header .title{
     text-align:center;
     padding:10px 0;
-
+    
 }
 #header .title h2{
-    border-bottom:1px solid #f1f3f5;
+    border-bottom:1px solid #aaa;
     display:inline-block;
     padding-bottom:10px;
 }
-
 #header .navigation{
     width:200px;
     margin:0 auto;
@@ -42,75 +39,60 @@ body{
     overflow: hidden;
 }
 #header .navigation .nav .nav_menu{
-    width: 900px;
+    width:540px;
+    width:900px;
     display:flex;
 }
 #header .navigation .nav .nav_menu li{
-    width:180px;
-    text-align: center;
-}
-/* 화살표 아이콘 */
-#header .navigation .dicrection p{
-    position:absolute;
-    top:50%;
-    transform: translate(0px , -50%);
-    cursor:pointer;
-}
-#header .navigation .dicrection .prev{
-    left:-10px;
-}
-#header .navigation .dicrection .next{
+@@ -63,9 +63,50 @@ body{
     right:-10px;
 }
+
 #header .navigation .nav .nav_menu{
-    position: relative;
-    left: 0;
-    transition: left 1st ease;
+    position:relative;
+    left:0;
+    transition: left 1s ease;
+
+    /* transform: translate(0px, 0px);
+    transition: transform 1s ease; */
 }
 
-/* transform: translate(0px, 0px);
-transition: transform 1s ease; */
+
 
 #section{
     width:100%;
 }
-#section{
-    width: 100%;
-    margin-top: 30px;
+    margin-top:30px;
 }
-
 #section h3{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom:20px;
 }
-
 #section .list_box{
     border-spacing: 0;
-    width: 80%;
-    margin: 0 auto;
+    width:80%;
+    margin:0 auto;
 }
 
 #section .list_box tr td{
-    border-bottom: 1px solid #cdcdcd;
-    padding: 10px 20px;
+    border-bottom:1px solid #cdcdcd;
+    padding:10px 20px;
     text-align: center;
 }
 
 #section .list_box .name span{
-    display: inline-block;
-    width: 48px;
-    position: relative;
+    display:block;
+    width:48px;
+    position:relative;
 }
 
 #section .list_box .name span::after{
     content:"";
-    width: 48px;
-    position: absolute;
-    top: 25px;
-    left: 0;
+    width:48px;
+    position:absolute;
+    top:25px;
+    left:0;   
 }
-
-#section .list_box .name span:hover::after{
-    border-bottom: 2px solid orange;
-    top: 25px;
+#section .list_box .name span:hover:after{
+    border-bottom:2px solid orange;
 }
