@@ -44,7 +44,20 @@ body{
     display:flex;
 }
 #header .navigation .nav .nav_menu li{
-@@ -63,9 +63,50 @@ body{
+    width:180px;
+    text-align: center;
+}
+/* 화살표 아이콘 */
+#header .navigation .dicrection p{
+    position:absolute;
+    top:50%;
+    transform: translate(0px , -50%);
+    cursor:pointer;
+}
+#header .navigation .dicrection .prev{
+    left:-10px;
+}
+#header .navigation .dicrection .next{
     right:-10px;
 }
 
@@ -61,9 +74,9 @@ body{
 
 #section{
     width:100%;
-}
     margin-top:30px;
 }
+
 #section h3{
     text-align: center;
     margin-bottom:20px;
