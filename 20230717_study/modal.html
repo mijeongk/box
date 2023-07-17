@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="modal">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+    <style>
+        #wrap{
+            width: 1000px;
+            margin: 0 auto;
+        }
+        #header{margin-bottom:50px;}
+        .top{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 2px solid orange;
+            margin-bottom: 30px;
+        }
+        .write{
+            display: inline-block;
+            font-size: 25px;
+            padding: 10px 20px;
+            background: orange;
+        }
+        ul{list-style: none; font-size: 30px;}
+    </style>
+    
+
+
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <img src="https://loremflickr.com/1000/400">
+        </div>
+        <div id="content">
+            <div class="top">
+                <h3>문의</h3>
+                <a href="javascript:modal_open();" class="write">글쓰기</a>
+                <!-- a 태그로 javascript 실행 가능. a태그 넣으면 클릭 안넣어도 된다. -->
+            </div>
+            <div>
+                <ul>
+                    <li>문의글 1</li>
+                    <li>문의글 2</li>
+                    <li>왜 왼쪽에 뒤에서 두번째의 오른쪽은 지각했을까</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 헷갈릴까봐 여기 쓰는거임! -->
+
+    <style>
+        #modal{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+        }
+        #modal_bg{
+            background: black;
+            opacity: 0.6;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+        }
+        #modal_content{
+            position: absolute;
+            background: #fff;
+            width: 260px;
+            height: 180px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+
+    <div id="modal">
+        <div id="modal_bg"></div>
+        <div id="modal_content">
+            <div class="title">
+                <label>제목</label>
+                <input type="text"/>
+            </div>
+            <div class="cont">
+                <h3></h3>
+                <textarea rows="5" cols="30"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function(){
+            $("#modal").hide(); // hide <-> show
+            $("#modal_bg").click(function(){
+                $("#modal").hide();
+            });
+        });
+        function modal_open(){
+            $("#modal").show(); // show, fadeToggle 등
+        }
+
+    </script>
+</body>
+</html>

@@ -170,7 +170,7 @@ setInterval(function(){
 // alert(text.substr(2,3)); // 2번째부터 3 글자만 나옴
 
 
-// path에서 확장자 추출하기
+// !!중요!! path에서 확장자 추출하기 !!
 // var path ="abc/fff/123/123/123/eee.asdfad.adsfad.jpg"; // 파일명 경로. 맨 뒤에 있는 확장자
 var path = location.href;
 path = path.split("/"); // / 폭파시킴(expl..). 3조각이 난 것임
@@ -182,3 +182,14 @@ ext = [ext[ext.length-1]];
 ext = [ext[0]]; // 파일명??
 alert(ext);
 // alert(path[path.length-1]); // 파일명과 확장자 같이 나옴
+
+document.getElementById("attBtn").onclick=function(){
+    var path = document.getElementById("attach").value;
+    path = path.split("/");
+    var ext = path[path.length-1].split("."); // 파일명
+    ext = ext[ext.length-1]; // 확장자
+    alert(ext);
+}
+
+//jquery
+
