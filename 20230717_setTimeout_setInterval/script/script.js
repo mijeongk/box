@@ -159,7 +159,7 @@ setInterval(function(){
     var g = rand(0,255);
     var b = rand(0,255);
     document.getElementsByTagName("body")[0].style.backgroundColor = "rgb("+r+","+g+","+b+")";
-}, 500);
+}, 5000);
 // id 제외하고 다 getElement's' 사용. 바디가 1개라도 0번째 적어줘야함 "rgb("++","++","++")";
 
 // var text = "안녕하세요. 하하입니다."; 
