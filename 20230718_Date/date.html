@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>객체</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mijeong Kang">
+    <meta name="keywords" content="날짜, 시간, 시, 분, 초, 월, 일, 년, timestamp">
+    <meta name="description" content="Date 객체를 통해 날짜 및 시간을 확인(get) 또는 세팅(set), 계산할 수 있다.">
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!-- <style>
+        #list1>li:hover{
+            color: red;
+        }
+    </style> -->
+    <style>
+        #fly {
+            position: fixed;
+            margin-left: -32px;
+            margin-top: -32px;
+            pointer-events: none;
+            display: none;
+        }
+
+        nav {
+            height: 30px;
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        .main {
+            float: left;
+
+        }
+
+        .main>a {
+            display: block;
+            width: 150px;
+            height: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .sub {
+            position: absolute;
+            background-color: white;
+            box-shadow: 2px 10px 15px rgba(0,0,0,0.2);
+            padding-left: 0;
+            width: 150px;
+            display: none;
+        }
+
+        .sub a {
+            display: block;
+            padding: 8px 10px;
+        }
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="main">
+                <a href="#">회사소개</a>
+                <ul class="sub">
+                    <li><a href="">CEO 인사말</a></li>
+                    <li><a href="">오시는 길</a></li>
+                    <li><a href="">회사 연혁</a></li>
+                </ul>
+            </li>
+            <li class="main">
+                <a href="#">제품소개</a>
+                <ul class="sub">
+                    <li><a href="#">모바일 사업부</a></li>
+                    <li><a href="#">메모리 사업부</a></li>
+                    <li><a href="#">비메모리 사업부</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <input id="result" type="text" readonly />
+    <br/>
+    <input id="date" type="date"/> <!-- 년도 월 형식으로 가능하다 -->
+    <button id="dateBtn type=button">계산하기</button>
+
+    <!-- input으로 만들면 value로 만들어야함..? -->
+    
+    <ul id="list1">
+        <li>123123123</li>
+        <li>123123123</li>
+        <li>123123123</li>
+        <li>123123123</li>
+        <li>123123123</li>
+        <li>123123123</li>
+        <li>123123123</li>
+    </ul>
+
+    <select id="nation">
+        <option></option>
+        <option>대한민국</option>
+        <option>미국</option>
+        <option>영국</option>
+        <option>인도</option>
+        <option>파푸아뉴기니</option>
+        <option>멕시코</option>
+    </select>
+
+    <input />
+    <input id="input2" />
+    <input id="input1" />
+    <p id="final"></p>
+    <button id="submitBtn">로그인</button>
+
+    <script src="script/date.js"></script> <!-- 상대주소 -->
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <style>
+        #list tr td{
+            border: 1px solid black;
+            height: 50px; text-align: center;
+        }
+        .name{width: 200px; height: 50px; text-align: center;}
+        .age {width: 80px;}
+        .addr{width: 400px;}
+    </style>
+
+</head>
+<body>
+    <table id="list">
+
+    </table>
+
+
+</body>
+</html>
+
+<script>
+    $.getJSON('test_data.json',function(data){
+        // console.log(data.name); // data.키
+    for(var i=0; i<data.info.length; i++){
+
+        // if(data.info[i].age>=30){
+        if(data.info[i].addr.indexOf("동구") != -1){
+        // 해당 문자 배열이기 때문에 indexOf 배열 안에있는 데이터 중에서 index?알려주는 것?
+        // 못찾으면 -1 값 나옴 != -1 같지 않다면 찾았다는 뜻
+
+        $("#list").append("<tr><td class=name>"+data.info[i].name+"</td><td class=age>"+data.info[i].age+"</td><td class=addr>"+data.info[i].addr+"</td>");
+        }
+    }   
+    });
+</script>
+
+<!--[]: 대괄호 배열의 형태-->
+<!-- 키 구조 봐야지 가져올 수 있음
+가지고 와서 뽑아서 쓸 수 있게 만들어야함!-->
