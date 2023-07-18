@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* CSS reset: 각 태그들이 기존에 가지고 있던 특성들(ex: magin..)을 빼고
+box size는 border 값을 기준으로 하자 */
+
+#Title {
+    margin: 5px;
+    padding: 5px;
+    width: 1000px;
+    height: 50px;
+    background-color: gray;
+
+}
