@@ -10,7 +10,7 @@ var date = now.getDate();
 // 2023-7-18
 // 한자리 숫자일 때 좌측에 0을 추가해주는 함수 필요
 function addZero(num){
-    var result=""; // num 완성품 보여주려면 담아야한다.
+    var result = ""; // num 완성품 보여주려면 담아야한다.
     if(num < 10){
         result = "0"+ num;
     }else{
@@ -45,7 +45,14 @@ min = addZero(min);
 sec = addZero(sec);
 
 var narjja = year+"-"+ month +"-"+ date + " "+ yoil[day];
-narjja += " "+ ampm + " " + hour + ":"+ min + ":" + sec;
+narjja += " ";
+narjja += ampm;
+narjja += " ";
+narjja += hour;
+narjja += ":";
+narjja += min;
+narjja += ":"; 
+narjja += sec;
 
 // a=a+1
 // a+=1;
@@ -58,7 +65,7 @@ narjja += " "+ ampm + " " + hour + ":"+ min + ":" + sec;
 // now의 timestamp에서 2022-02-03의 timestamp를 빼면 => 지나온 세월(timestamp) => 일자로 계산
 // alert(now.getTime());
 
-document.getElementById("dateBtn").onclick = (function(){
+document.getElementById("dateBtn").onclick = function(){
     var date = document.getElementById("date").value;
     // alert(date); 중간점검
     var anni = new Date(date);
@@ -70,13 +77,11 @@ document.getElementById("dateBtn").onclick = (function(){
     duration = parseInt(duration); //integer(정수)
     // alert(duration); 중간점검 (소수점 제외)
     // 하루 = 24시간 => 12*60=1440분 => 86400초
-    duration = duration/86400 // 일수로 변경됨
+    duration = duration/86400; // 일수로 변경됨
     duration = Math.floor(duration);
     // alert(duration); 중간점검
     document.getElementById("result").value= duration + "일 째입니다.";
-});
-
-// 오타 어디있는지 보기!!
+}
 
 // 왜 이름이 jQuery인가? javascript query(질의: 필요한 정보를 묻기 위해 질문하는 것) => 뭔가를 부른다!
 // INSER INTO user (userId, userPw, userName) VALUE("abc123","afdf").. 데이터베이스 이런식으로 쓴다. 어쨌든 질의 한다.
@@ -94,14 +99,14 @@ document.getElementById("dateBtn").onclick = (function(){
 // $("지호").walk();
 // 날씨가 비올 때 지호야 뛰어가라.
 // $("날씨").비올때(function(){
-    // $("지호").뛰어가라();
+//     $("지호").뛰어가라();
 // });
 
 // 까마귀 날자 때 떨어진다. 
 // 까마귀가 날 때 funcstion 이뤄진다.
 // ~할때 보통 event 함수라고 한다. 날떄(이벤트). 떨어진다(일반함수)
 // $("까마귀").날때(function(){
-    // $("배").떨어진다();
+//     $("배").떨어진다();
 // });
 
 // 지호가 기쁠 때 지호는 박수를 쳐라. 주어가 중복됨. 그러니 this를 활용한다.
@@ -116,20 +121,15 @@ document.getElementById("dateBtn").onclick = (function(){
 //     $(this).손들기();
 // });
 
-// #list>li에 마우스를 올렸을 때
-// #list>li는 빨개진다.
-// $("#list").mouseover(function(){
-//     $("#list").css("스타일이름", "값")
-// });
+// #list>li에 마우스를 올렸을 때 #list>li는 빨개지고 치우면 검은색으로.
 
 // $("#list1>li").mouseover(function(){
-//     $("#list1>li").css("color", "red");
+//    $(this).css("color","red"); // "스타일", "값"
+// });
+// $("#list1>li").mouseout(function(){
+//     $(this).css("color","black"); // "스타일", "값"
 // });
 
-// $("#list1>li").mouseout(function(){
-//     $(this).css("color","red");
-// });
-// 왜 이것도 안되냐...
 
 //이거 먼저 해줘야한다.
 $(document).ready(function(){
@@ -141,35 +141,35 @@ $(document).ready(function(){
     $("#nation").change(function(){
         alert($(this).val());
     });
-    $("#input").focus(function(){
-        $(this).css("ouline","2px solid red")
+    $("input").focus(function(){
+        $(this).css("outline","2px solid red")
     });
     $("input").blur(function(){
         $(this).css("outline","none");
     });
 
-    // #input1에서 키가 눌릴때 그 내용을 #final1에 적겠따.
+    // #input1에서 키가 눌릴때 그 내용을 #final1에 적겠다.
     $("#input1").keyup(function(){
         var t = $(this).val();
         $("#final").text(t);
         // (keydown 함수에 넣으면) 키가 눌리기 시작하고 글자가 들어옴 글자 들어오기 전에 직전 내용만 쓰게됨 그래서 마지막 글자 안나옴 
         // 그러니 keyup 사용
+    });
 
-        $("#submitBtn").click(function(){
-            alert();
-        });
+    $("#submitBtn").click(function(){
+        alert();
+    });
 
         // #input2에서 키가 눌렸을 떄 방금 눌린키가 엔터키라면 #submitBtn을 누른셈이나 다름없게 하겠다.(촉발제?)
         // event = e라고도 함
         // enterkey 13번
         // 코드 모르면 alert로 묶어서 물어보기
 
-        $("#input2").keyup(function(event){
-            // alert(event.keyCode); 키 눌렀을 때 코드 무엇인지 나타냄
-            if(event.keyCode == 13 ){
-                $("#submitBtn").trigger("click");
-            }
-        });
+    $("#input2").keyup(function(event){
+        // alert(event.keyCode); 키 눌렀을 때 코드 무엇인지 나타냄
+        if(event.keyCode == 13 ){
+            $("#submitBtn").trigger("click");
+        }
     });
     // 문서 내에서 마우스가 움직일때마다 이런일들을 하겠다.
     // 방금 움직인 그 마우스의 x,y좌표를 찾알.
@@ -187,10 +187,7 @@ $(document).ready(function(){
         // 방금 그것의 자식 중 .sub라고 하는 녀석을 보여주자.
     // .main에서 마우스 치웠을 때 이런 일이 벌어질 것이다.
         // 방금 그것의 자식 중 .sub라고 하는 녀석을 숨겨주자.
-    $(".main").nouseenter(function(){
-        $(this).children(".sub").show();
-    });
-    $(".main").mouseleave(function(){
+    $(".main").mouseenter(function(){
         $(this).children(".sub").stop().fadeIn(); // slideDown 등도 가능
     });
     $(".main").mouseleave(function(){
