@@ -14,6 +14,10 @@ box size는 border 값을 기준으로 하자 */
 #title{
     width: 100%;
     height: 40px;
-    font
+}
 
+#content{
+    width: 100%;
+    height: 0 auto;
+    display: flex;
 }
